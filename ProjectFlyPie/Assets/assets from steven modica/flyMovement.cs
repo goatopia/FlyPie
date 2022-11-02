@@ -12,7 +12,7 @@ public class flyMovement : MonoBehaviour
     int flySpawnPointX;
     int flySpawnPointY;
 
-    int flySpawnPosition[];
+    //int flySpawnPosition[];
 
     int flyPositionX;
     int flyPositionY;
@@ -27,11 +27,11 @@ public class flyMovement : MonoBehaviour
     bool isLeftWarm = false;
 
 
-    int flyMadeItToTheCupcake()
+    /*int flyMadeItToTheCupcake()
     {
         // Destroy this fly and respawn in another one.
     }
-
+    */
     // Start is called before the first frame update
     void Start()
     {
@@ -41,7 +41,7 @@ public class flyMovement : MonoBehaviour
         flySpawnPointY = Random.Range(1, 10);
 
         // now the random coordinates has been made lets put them into the fly's spawn position
-        flySpawnPosition[] = { flySpawnPointX, flySpawnPointY};
+        //flySpawnPosition[] = { flySpawnPointX, flySpawnPointY};
 
         // after the fly has spawned in that random location, the fly's x and y coordinates are implemented
         flyPositionX = flySpawnPointX;
@@ -106,7 +106,7 @@ public class flyMovement : MonoBehaviour
         }
 
         // when the fly makes it to the cupcake the boolean will change and returns this statement in line 25
-        else { return flyMadeItToTheCupcake(); }
+        //else { return flyMadeItToTheCupcake(); }
 
     }
 }

@@ -1,0 +1,13 @@
+fileFormatVersion: 2
+guid: e9f9ecc102f6dac4c8dc4bad6e108325
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - piePrefab: {fileID: 7037740263854418478, guid: 80f66fcc9afc5264792a9beea0a026c4, type: 3}
+  - flyPrefab: {fileID: 4728023451536971962, guid: 4893463487c3a9f43a31e728fbc36102, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

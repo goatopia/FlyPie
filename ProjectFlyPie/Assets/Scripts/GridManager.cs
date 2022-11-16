@@ -10,6 +10,8 @@ public class GridManager : MonoBehaviour
     public Vector3 leftBottomLocation = new Vector3(0, 0, 0);
     public GameObject gridPrefab;
     public GameObject[,] gridArray;
+    //for giving each clone a unique name -CAC
+    private int nextNameNumber = 1;
 
 
     public void GenerateGrid()
@@ -19,6 +21,9 @@ public class GridManager : MonoBehaviour
             for(int j = 0; j < rows; j++)
             {
                 GameObject obj = Instantiate(gridPrefab, new Vector3(leftBottomLocation.x + scale * i, leftBottomLocation.y, leftBottomLocation.z + scale * j), Quaternion.identity);
+                //next two lines will "append"(not really) each clone object's name with a number, starting at 1 and ending at 100 -CAC
+                gridPrefab.name = "GridPos" + nextNameNumber;
+                nextNameNumber++;
                 obj.transform.SetParent(gameObject.transform);
                 gridArray[i, j] = obj;
             }

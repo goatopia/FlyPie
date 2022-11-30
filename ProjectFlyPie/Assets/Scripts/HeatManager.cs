@@ -13,7 +13,7 @@ public class HeatManager : MonoBehaviour
         if (other.CompareTag("Fly"))
         {
             HeatValue += 1;
-            Debug.Log("HeatValue is now: " + HeatValue);
+            //Debug.Log("HeatValue is now: " + HeatValue);
             HeatDetect += 1;
             Debug.Log("HeatDetect for " + this + " is " + HeatDetect);
         }

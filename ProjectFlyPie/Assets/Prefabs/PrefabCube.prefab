@@ -110,6 +110,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HeatValue: 1
+  HeatDetect: 1
 --- !u!54 &8703451736935860229
 Rigidbody:
   m_ObjectHideFlags: 0

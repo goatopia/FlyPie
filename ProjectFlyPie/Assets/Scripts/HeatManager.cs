@@ -15,6 +15,7 @@ public class HeatManager : MonoBehaviour
             HeatValue += 1;
             Debug.Log("HeatValue is now: " + HeatValue);
             HeatDetect += 1;
+            Debug.Log("HeatDetect for " + this + " is " + HeatDetect);
         }
     }
 }

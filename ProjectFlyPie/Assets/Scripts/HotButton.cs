@@ -4,10 +4,15 @@ using UnityEngine;
 
 public class HotButton : MonoBehaviour
 {
+    public GameObject HotButtonObject;
+
 
 
     //remember last position
+
+
     //variable for the flydecider script (direction)
+
     //forward 1, right 2, backwards 3, left 4
     //don't repeat direction
 

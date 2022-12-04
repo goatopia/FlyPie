@@ -111,7 +111,7 @@ GameObject:
   - component: {fileID: 3662759320306497768}
   m_Layer: 0
   m_Name: Sphere
-  m_TagString: Fly
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -188,7 +188,7 @@ SphereCollider:
   m_GameObject: {fileID: 4728023449965278121}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Radius: 0.40609214
   m_Center: {x: -0.004621195, y: 0.106413364, z: 0.024782918}
@@ -217,9 +217,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4728023451536971961}
-  - component: {fileID: -6169528572547174089}
   - component: {fileID: -105830084966684193}
   - component: {fileID: 4736726793462921159}
+  - component: {fileID: 4683407422293922345}
   m_Layer: 0
   m_Name: FLY
   m_TagString: Fly
@@ -246,18 +246,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
---- !u!114 &-6169528572547174089
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4728023451536971962}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 05e5677f33d01d64ab2405fe44c61768, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!135 &-105830084966684193
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -287,6 +275,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &4683407422293922345
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4728023451536971962}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05e5677f33d01d64ab2405fe44c61768, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Direction: 0
+  choiceWeight: 
 --- !u!1 &5249646986295760796
 GameObject:
   m_ObjectHideFlags: 0

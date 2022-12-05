@@ -6,6 +6,7 @@ TagManager:
   tags:
   - heatObject
   - Fly
+  - UI
   layers:
   - Default
   - TransparentFX

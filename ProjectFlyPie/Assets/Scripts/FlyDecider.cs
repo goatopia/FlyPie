@@ -8,37 +8,12 @@ public class FlyDecider : MonoBehaviour
     public int Direction;
 
     //weighted list used to choose a direction
-    [SerializeField] private List<int> choiceWeight = new List<int>();
+    public List<int> choiceWeight = new List<int>();
 
     //exclude the fly from being hit by our raycasts
     private int layerMask = 1 << 8;
 
-    void Awake()
-    {
-        //compile the list
-        LookAround();
-
-        //choose a direction
-        Move();
-    }
-
-    void Update()
-    {
-        if(Input.GetKeyDown("space"))
-        {
-            //reset the list
-            resetChoices();
-            
-            Debug.Log("space was pressed");
-            LookAround();
-
-            //Take hot cold feedback?
-
-            Move();
-        }
-    }
-
-        void LookAround()
+        public void LookAround()
     {
         RayForward();
         RayRight();
@@ -58,8 +33,6 @@ public class FlyDecider : MonoBehaviour
         {
             //add the integer '1' to the list n times, where n = HeatValue
             HeatManager heatManager = hitData.transform.GetComponent<HeatManager>();
-        
-            Debug.Log("Forward value is " + heatManager.HeatValue);
             for(int i = 0; i < heatManager.HeatValue; i++)
             {
                 choiceWeight.Add(1);
@@ -79,7 +52,6 @@ public class FlyDecider : MonoBehaviour
             //add the integer '2' to the list n times, where n = HeatValue
             HeatManager heatManager = hitData.transform.GetComponent<HeatManager>();
 
-            Debug.Log("Right value is " + heatManager.HeatValue);
             for(int i = 0; i < heatManager.HeatValue; i++)
             {
                 choiceWeight.Add(2);
@@ -99,7 +71,6 @@ public class FlyDecider : MonoBehaviour
             //add the integer '3' to the list n times, where n = HeatValue
             HeatManager heatManager = hitData.transform.GetComponent<HeatManager>();
 
-            Debug.Log("Backward value is " + heatManager.HeatValue);
             for(int i = 0; i < heatManager.HeatValue; i++)
             {
                 choiceWeight.Add(3);
@@ -119,7 +90,6 @@ public class FlyDecider : MonoBehaviour
             //add the integer '4' to the list n times, where n = HeatValue
             HeatManager heatManager = hitData.transform.GetComponent<HeatManager>();
 
-            Debug.Log("Left value is " + heatManager.HeatValue);
             for(int i = 0; i < heatManager.HeatValue; i++)
             {
                 choiceWeight.Add(4);
@@ -127,7 +97,7 @@ public class FlyDecider : MonoBehaviour
         }
     }
 
-    void Move()
+    public void moveFly()
     {
         //Select a direction from the list at random
         int random = Random.Range(0, choiceWeight.Count);
@@ -136,30 +106,26 @@ public class FlyDecider : MonoBehaviour
         //Move the fly
         if(Direction == 1)
         {
-            Debug.Log("FORWARD WAS CHOSEN");
             transform.Translate(0, 0, 1);
         }
 
         if(Direction == 2)
         {
-            Debug.Log("RIGHT WAS CHOSEN");
             transform.Translate(1, 0, 0);
         }
 
         if(Direction == 3)
         {
-            Debug.Log("BACKWARDS WAS CHOSEN");
             transform.Translate(0, 0, -1);
         }
 
         if(Direction == 4)
         {
-            Debug.Log("LEFT WAS CHOSEN");
             transform.Translate(-1, 0, 0);
         }
     }
 
-    void resetChoices()
+    public void resetChoices()
     {
         //reset the list
         while(choiceWeight.Count > 0)

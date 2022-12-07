@@ -21,7 +21,7 @@ public class HotButton : MonoBehaviour
                 if(value == 3)
                 {
                     Debug.Log(value + " was removed");
-                    flyChoice.choiceWeight.RemoveAt(value);
+                    flyChoice.choiceWeight.Remove(value);
 
                     return;
                 }
@@ -35,7 +35,7 @@ public class HotButton : MonoBehaviour
                 if(value == 1)
                 {
                     Debug.Log(value + " was removed");
-                    flyChoice.choiceWeight.RemoveAt(value);
+                    flyChoice.choiceWeight.Remove(value);
                     return;
                 }
             }
@@ -49,7 +49,7 @@ public class HotButton : MonoBehaviour
                 if(value == 4)
                 {
                     Debug.Log(value + " was removed");
-                    flyChoice.choiceWeight.RemoveAt(value);
+                    flyChoice.choiceWeight.Remove(value);
                     return;
                 }
             }
@@ -62,7 +62,7 @@ public class HotButton : MonoBehaviour
                 if(value == 2)
                 {
                     Debug.Log(value + " was removed");
-                    flyChoice.choiceWeight.RemoveAt(value);
+                    flyChoice.choiceWeight.Remove(value);
                     return;
                 }
             }

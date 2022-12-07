@@ -20,10 +20,13 @@ public class HotButton : MonoBehaviour
             {
                 if(value == 3)
                 {
-                    Debug.Log(value + " was removed");
-                    flyChoice.choiceWeight.Remove(value);
+                    while (flyChoice.choiceWeight.Contains(3))
+                    {
 
-                    return;
+                        Debug.Log(value + " was removed");
+                        flyChoice.choiceWeight.Remove(value);
+                        return;
+                    }
                 }
             }
         }
@@ -34,9 +37,13 @@ public class HotButton : MonoBehaviour
             {
                 if(value == 1)
                 {
-                    Debug.Log(value + " was removed");
-                    flyChoice.choiceWeight.Remove(value);
-                    return;
+                    while (flyChoice.choiceWeight.Contains(1))
+                    {
+
+                        Debug.Log(value + " was removed");
+                        flyChoice.choiceWeight.Remove(value);
+                        return;
+                    }
                 }
             }
 
@@ -48,9 +55,13 @@ public class HotButton : MonoBehaviour
             {
                 if(value == 4)
                 {
-                    Debug.Log(value + " was removed");
-                    flyChoice.choiceWeight.Remove(value);
-                    return;
+                    while (flyChoice.choiceWeight.Contains(4))
+                    {
+
+                        Debug.Log(value + " was removed");
+                        flyChoice.choiceWeight.Remove(value);
+                        return;
+                    }
                 }
             }
         }
@@ -61,9 +72,13 @@ public class HotButton : MonoBehaviour
             {
                 if(value == 2)
                 {
-                    Debug.Log(value + " was removed");
-                    flyChoice.choiceWeight.Remove(value);
-                    return;
+                    while (flyChoice.choiceWeight.Contains(2))
+                    {
+
+                        Debug.Log(value + " was removed");
+                        flyChoice.choiceWeight.Remove(value);
+                        return;
+                    }
                 }
             }
         }

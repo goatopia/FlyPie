@@ -13,19 +13,24 @@ public class ColdButton : MonoBehaviour
         data = GameObject.FindObjectOfType<GMData>();
         data.hasAnswered = true;
         
-                if(flyChoice.Direction == 1)
+        if(flyChoice.Direction == 1)
         {
             //  don't go to 1
             foreach(int value in flyChoice.choiceWeight)
             {
                 if(value == 1)
                 {
-                    Debug.Log(value + " was removed");
-                    flyChoice.choiceWeight.Remove(value);
-                    return;
+                    while(flyChoice.choiceWeight.Contains(1))
+                    {
+
+                        Debug.Log(value + " was removed");
+                        flyChoice.choiceWeight.Remove(value);
+                        return;
+                    }
                 }
             }
         }
+        
         if(flyChoice.Direction == 3)
         {
             //  don't go to 3
@@ -33,9 +38,13 @@ public class ColdButton : MonoBehaviour
             {
                 if(value == 3)
                 {
-                    Debug.Log(value + " was removed");
-                    flyChoice.choiceWeight.Remove(value);
-                    return;
+                    while (flyChoice.choiceWeight.Contains(3))
+                    {
+
+                        Debug.Log(value + " was removed");
+                        flyChoice.choiceWeight.Remove(value);
+                        return;
+                    }
                 }
             }
 
@@ -47,9 +56,13 @@ public class ColdButton : MonoBehaviour
             {
                 if(value == 2)
                 {
-                    Debug.Log(value + " was removed");
-                    flyChoice.choiceWeight.Remove(value);
-                    return;
+                    while (flyChoice.choiceWeight.Contains(2))
+                    {
+
+                        Debug.Log(value + " was removed");
+                        flyChoice.choiceWeight.Remove(value);
+                        return;
+                    }
                 }
             }
         }
@@ -60,11 +73,17 @@ public class ColdButton : MonoBehaviour
             {
                 if(value == 4)
                 {
-                    Debug.Log(value + " was removed");
-                    flyChoice.choiceWeight.Remove(value);
-                    return;
+                    while (flyChoice.choiceWeight.Contains(4))
+                    {
+
+                        Debug.Log(value + " was removed");
+                        flyChoice.choiceWeight.Remove(value);
+                        return;
+                    }
                 }
             }
         }
+
+
     }
 }

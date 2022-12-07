@@ -1,11 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class HeatManager : MonoBehaviour
 {
     public int HeatValue; //{get; private set;}
-
+    public TMP_Text heatdisplay;
     private void Awake()
     {
         HeatValue = 1;
@@ -17,5 +18,11 @@ public class HeatManager : MonoBehaviour
         {
             HeatValue += 1;
         }
+    }
+
+    private void Update()
+    {
+        heatdisplay.text = HeatValue.ToString();
+
     }
 }

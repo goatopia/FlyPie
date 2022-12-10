@@ -8,6 +8,7 @@ public class FlyNPieSpawner : MonoBehaviour
     public Vector3 flyCoord;
     public GameObject piePrefab;
     public GameObject flyPrefab;
+    public int numberOfFliesSpawned;
     //private int xPie;
     //private int yPie;
     //private int xFly;
@@ -33,4 +34,11 @@ public class FlyNPieSpawner : MonoBehaviour
         Debug.Log("flyCoord = " + flyCoord);
 
     }
+
+    public void spawnFly()
+    {
+        numberOfFliesSpawned++;
+        Instantiate(flyPrefab, flyCoord, Quaternion.identity);
+    }
+
 }

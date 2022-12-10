@@ -220,6 +220,7 @@ GameObject:
   - component: {fileID: -105830084966684193}
   - component: {fileID: 4736726793462921159}
   - component: {fileID: 4683407422293922345}
+  - component: {fileID: 5554278564460770997}
   m_Layer: 0
   m_Name: FLY
   m_TagString: Fly
@@ -289,6 +290,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Direction: 0
   choiceWeight: 
+--- !u!114 &5554278564460770997
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4728023451536971962}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb07dde32a94f9240bfe0e8d9bb1a898, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5249646986295760796
 GameObject:
   m_ObjectHideFlags: 0

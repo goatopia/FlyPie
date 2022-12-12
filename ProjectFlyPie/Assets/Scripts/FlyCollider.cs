@@ -19,9 +19,12 @@ public class FlyCollider : MonoBehaviour
             Destroy(currentFly);
             Debug.Log("the fly reached the pie");
         }
-        else if (other.CompareTag("heatObject"))
+    }
+    public void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("heatObject"))
         {
-            tileName = collision.gameObject;
+            tileName = other.gameObject;
             Debug.Log("Tile Name is" + tileName);
         }
     }

@@ -14,7 +14,7 @@ public class ColdButton : MonoBehaviour
     {
         tile = GameObject.FindObjectOfType<FlyCollider>();
         heatReducer = tile.tileName.GetComponent<HeatManager>();
-        heatReducer.HeatValue = 0;
+        heatReducer.HeatValue -= 1;
         flyChoice = GameObject.FindObjectOfType<FlyDecider>();
         data = GameObject.FindObjectOfType<GMData>();
         data.hasAnswered = true;

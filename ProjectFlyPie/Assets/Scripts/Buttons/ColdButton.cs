@@ -6,9 +6,15 @@ public class ColdButton : MonoBehaviour
 {
     public FlyDecider flyChoice;
     public GMData data;
+    public HeatManager heatValue;
+    public FlyCollider tile;
+    public HeatManager heatReducer;
 
     public void OnClick()
     {
+        tile = GameObject.FindObjectOfType<FlyCollider>();
+        heatReducer = tile.tileName.GetComponent<HeatManager>();
+        heatReducer.HeatValue = 0;
         flyChoice = GameObject.FindObjectOfType<FlyDecider>();
         data = GameObject.FindObjectOfType<GMData>();
         data.hasAnswered = true;

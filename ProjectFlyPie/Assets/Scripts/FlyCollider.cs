@@ -8,6 +8,7 @@ public class FlyCollider : MonoBehaviour
     public GameObject tileName;
     public FlyNPieSpawner spawnerscript;
 
+/*
     private void OnCollisionEnter(Collision collision)
     {
         GameObject other = collision.gameObject;
@@ -20,12 +21,22 @@ public class FlyCollider : MonoBehaviour
             Debug.Log("the fly reached the pie");
         }
     }
+*/
+
     public void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("heatObject"))
+        if(other.CompareTag("Pie"))
+        {
+            Debug.Log("Pie");
+            currentFly = GameObject.FindGameObjectWithTag("Fly");  
+            spawnerscript = GameObject.FindObjectOfType<FlyNPieSpawner>();
+            spawnerscript.spawnFly();
+            Destroy(currentFly);
+            Debug.Log("the fly reached the pie");  
+        }
+        else if (other.CompareTag("heatObject"))
         {
             tileName = other.gameObject;
-            Debug.Log("Tile Name is" + tileName);
         }
     }
 }

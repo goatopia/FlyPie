@@ -5,7 +5,7 @@ public class Move : GMBaseState
     public override void EnterState(GMStateManager manager)
     {
         flyChoice = GameObject.FindObjectOfType<FlyDecider>();
-        flyChoice.resetChoices(); //clear the lists
+        flyChoice.resetChoices(); //clear the list of available moves
         flyChoice.LookAround(); //collect new environment data
 
 
@@ -26,7 +26,7 @@ public class Move : GMBaseState
         {
             flyChoice = GameObject.FindObjectOfType<FlyDecider>();
             flyChoice.moveFly();
-            data.regulator += 1; //had an issue where the fly was moving twice sometimes
+            data.regulator += 1; //had an issue where the fly was moving twice sometimes, so the regulator int prevents this
         }
 
         else if(data.hasAnswered == false)

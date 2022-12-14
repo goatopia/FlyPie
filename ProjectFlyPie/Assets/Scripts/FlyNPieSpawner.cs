@@ -56,7 +56,7 @@ public class FlyNPieSpawner : MonoBehaviour
     {
         numberOfFliesSpawned++;
         activeFlies.Add(GameObject.FindGameObjectWithTag("Fly"));
-        Instantiate(flyPrefab, flyCoord, Quaternion.Euler(0,270,0)); //spawn the fly rotated, so it faces forwards
+        Instantiate(flyPrefab, flyCoord, Quaternion.Euler(0,0,0)); //spawning at (0, 270, 0) will have the fly rotated in an aesthetic way, but it also messes with our raycasts
         generationDisplay.text = "Gen: " + numberOfFliesSpawned.ToString();
     }
 

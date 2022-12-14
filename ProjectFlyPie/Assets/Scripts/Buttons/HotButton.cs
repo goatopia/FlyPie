@@ -15,6 +15,15 @@ public class HotButton : MonoBehaviour
 
         if(flyChoice.Direction == 1)
         {
+            for(var i = 0; i<flyChoice.choiceWeight.Count; i++)
+            {
+                if(flyChoice.choiceWeight[i] == 3)
+                {
+                    flyChoice.choiceWeight.RemoveAt(i);
+                    break;
+                }
+            }
+            /*
             //  don't go to 3
             foreach(int value in flyChoice.choiceWeight)
             {
@@ -27,9 +36,19 @@ public class HotButton : MonoBehaviour
                     }
                 }
             }
+            */
         }
         if(flyChoice.Direction == 3)
         {
+            for(var i = 0; i<flyChoice.choiceWeight.Count; i++)
+            {
+                if(flyChoice.choiceWeight[i] == 1)
+                {
+                    flyChoice.choiceWeight.RemoveAt(i);
+                    break;
+                }
+            }
+            /*
             //  don't go to 1
             foreach(int value in flyChoice.choiceWeight)
             {
@@ -42,10 +61,20 @@ public class HotButton : MonoBehaviour
                     }
                 }
             }
+            */
 
         }
         if(flyChoice.Direction == 2)
         {
+            for(var i = 0; i<flyChoice.choiceWeight.Count; i++)
+            {
+                if(flyChoice.choiceWeight[i] == 4)
+                {
+                    flyChoice.choiceWeight.RemoveAt(i);
+                    break;
+                }
+            }
+            /*
             //  don't go to 4
             foreach(int value in flyChoice.choiceWeight)
             {
@@ -58,9 +87,19 @@ public class HotButton : MonoBehaviour
                     }
                 }
             }
+            */
         }
         if(flyChoice.Direction == 4)
         {
+            for(var i = 0; i<flyChoice.choiceWeight.Count; i++)
+            {
+                if(flyChoice.choiceWeight[i] == 2)
+                {
+                    flyChoice.choiceWeight.RemoveAt(i);
+                    break;
+                }
+            }
+            /*
             //don't go to 2
             foreach(int value in flyChoice.choiceWeight)
             {
@@ -73,6 +112,7 @@ public class HotButton : MonoBehaviour
                     }
                 }
             }
+            */
         }
     }
 }

@@ -29,7 +29,8 @@ public class GridManager : MonoBehaviour
             }
         }
     }
-
+    
+    //if the grid prefab is properly assigned in the Inspector, then the grid will generate
     private void Awake()
     {
         gridArray = new GameObject[columns, rows];

@@ -9,11 +9,15 @@ public class HotButton : MonoBehaviour
 
     public void OnClick()
     {
+        //Gets the last move of the Fly
         flyChoice = GameObject.FindObjectOfType<FlyDecider>();
         data = GameObject.FindObjectOfType<GMData>();
         data.hasAnswered = true;
 
-        if(flyChoice.Direction == 1)
+        //These IF statements remove the number from choiceWeight that represents the opposite direction of the Fly's last movement
+        
+        //Don't go to 3(direction of "backward" raycast)
+        if (flyChoice.Direction == 1)
         {
             for(var i = 0; i<flyChoice.choiceWeight.Count; i++)
             {
@@ -38,7 +42,9 @@ public class HotButton : MonoBehaviour
             }
             */
         }
-        if(flyChoice.Direction == 3)
+
+        //Don't go to 1(direction of "forward" raycast)
+        if (flyChoice.Direction == 3)
         {
             for(var i = 0; i<flyChoice.choiceWeight.Count; i++)
             {
@@ -64,7 +70,9 @@ public class HotButton : MonoBehaviour
             */
 
         }
-        if(flyChoice.Direction == 2)
+
+        //Don't go to 4(direction of "left" raycast)
+        if (flyChoice.Direction == 2)
         {
             for(var i = 0; i<flyChoice.choiceWeight.Count; i++)
             {
@@ -89,7 +97,9 @@ public class HotButton : MonoBehaviour
             }
             */
         }
-        if(flyChoice.Direction == 4)
+
+        //Don't go to 2(direction of "right" raycast)
+        if (flyChoice.Direction == 4)
         {
             for(var i = 0; i<flyChoice.choiceWeight.Count; i++)
             {

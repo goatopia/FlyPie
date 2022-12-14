@@ -5,13 +5,13 @@ public class Move : GMBaseState
     public override void EnterState(GMStateManager manager)
     {
         flyChoice = GameObject.FindObjectOfType<FlyDecider>();
-        flyChoice.resetChoices();
-        flyChoice.LookAround();
+        flyChoice.resetChoices(); //clear the lists
+        flyChoice.LookAround(); //collect new environment data
 
 
         Debug.Log("Current State: Move");
 
-        //disable ui
+        //disable ui (prevents the player from pressing the buttons more than they should)
         UI_Canvas = GameObject.FindGameObjectWithTag("UI");
         UI_Canvas.transform.GetChild(0).gameObject.SetActive(false);
     }
@@ -26,7 +26,7 @@ public class Move : GMBaseState
         {
             flyChoice = GameObject.FindObjectOfType<FlyDecider>();
             flyChoice.moveFly();
-            data.regulator += 1;
+            data.regulator += 1; //had an issue where the fly was moving twice sometimes
         }
 
         else if(data.hasAnswered == false)

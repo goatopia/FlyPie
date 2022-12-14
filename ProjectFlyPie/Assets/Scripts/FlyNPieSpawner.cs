@@ -29,7 +29,7 @@ public class FlyNPieSpawner : MonoBehaviour
         //displays value of pieCoord
         Debug.Log("pieCoord = " + pieCoord);
 
-        flyCoord = new Vector3(Random.Range(-5, 4), 0, Random.Range(-5, 4));
+        flyCoord = new Vector3(Random.Range(-5, 4), 1, Random.Range(-5, 4));
         //displays value of flyCoord
         Debug.Log("flyCoord = " + flyCoord);
 

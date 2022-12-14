@@ -19,7 +19,7 @@ public class FlyNPieSpawner : MonoBehaviour
     {
         GetCoords();
         Instantiate(piePrefab, pieCoord, Quaternion.identity);
-        Instantiate(flyPrefab, flyCoord, Quaternion.identity);
+        Instantiate(flyPrefab, flyCoord, Quaternion.Euler(0,270,0));
     }
 
     // creates random coords for pie and fly between (-5,-5) and (4, 4), block centers, keeping a y=0
@@ -29,7 +29,7 @@ public class FlyNPieSpawner : MonoBehaviour
         //displays value of pieCoord
         Debug.Log("pieCoord = " + pieCoord);
 
-        flyCoord = new Vector3(Random.Range(-5, 4), 1, Random.Range(-5, 4));
+        flyCoord = new Vector3(Random.Range(-5, 4), 0, Random.Range(-5, 4));
         //displays value of flyCoord
         Debug.Log("flyCoord = " + flyCoord);
 

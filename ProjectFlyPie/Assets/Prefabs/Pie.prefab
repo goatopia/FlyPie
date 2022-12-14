@@ -57,6 +57,7 @@ GameObject:
   - component: {fileID: 8244954617958158730}
   - component: {fileID: 3651323420130602565}
   - component: {fileID: 6098514149108393061}
+  - component: {fileID: 9143028595107264932}
   m_Layer: 0
   m_Name: Pie
   m_TagString: Pie
@@ -164,6 +165,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pieTile: {fileID: 0}
   heatValue: {fileID: 0}
+--- !u!114 &9143028595107264932
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7037740263854418478}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 831c8f31bba1b874db2dbf8a9d64c89c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flyChoice: {fileID: 0}
+  pieTile: {fileID: 0}
+  heatValue: {fileID: 0}
+  pieHeat: {fileID: 0}
 --- !u!1001 &6810321330904961687
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -236,6 +253,7 @@ PrefabInstance:
     - {fileID: 8829507912421866331, guid: fb8bb6ddce86c1247ae5814644a19d44, type: 3}
     - {fileID: 2217833679904199906, guid: fb8bb6ddce86c1247ae5814644a19d44, type: 3}
     - {fileID: 9041105904581315052, guid: fb8bb6ddce86c1247ae5814644a19d44, type: 3}
+    - {fileID: -381375681921333029, guid: fb8bb6ddce86c1247ae5814644a19d44, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: fb8bb6ddce86c1247ae5814644a19d44, type: 3}
 --- !u!4 &7223124700417175466 stripped
 Transform:

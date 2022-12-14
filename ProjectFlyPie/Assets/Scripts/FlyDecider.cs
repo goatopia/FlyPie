@@ -101,7 +101,13 @@ public class FlyDecider : MonoBehaviour
     {
         //Select a direction from the list at random
         int random = Random.Range(0, choiceWeight.Count);
-        Direction = choiceWeight[random];
+        
+        if(choiceWeight.Count == 0) //if all the available tiles have a heat of 0, randomly pick
+        {
+        Direction = Random.Range(1,5); //known bug: this will allow the fly to exit the grid sometimes :( 
+            //because it stops the player from trapping the fly, I think it is worth keeping this fix even though it's sloppy
+        }
+        else Direction = choiceWeight[random];
 
         //Move the fly
         if(Direction == 1)
@@ -123,6 +129,7 @@ public class FlyDecider : MonoBehaviour
         {
             transform.Translate(-1, 0, 0);
         }
+        
     }
 
     public void resetChoices()

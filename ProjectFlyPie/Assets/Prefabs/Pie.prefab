@@ -1,49 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &5482977855608959068
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 8251599021362887515}
-  - component: {fileID: 5675243983126890385}
-  m_Layer: 0
-  m_Name: Collider
-  m_TagString: Pie
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &8251599021362887515
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5482977855608959068}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 3034928676242779607}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &5675243983126890385
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5482977855608959068}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.25, y: 1, z: 0.25}
-  m_Center: {x: 0, y: 0.5, z: 0}
 --- !u!1 &7037740263854418478
 GameObject:
   m_ObjectHideFlags: 0
@@ -58,7 +14,7 @@ GameObject:
   - component: {fileID: 3651323420130602565}
   - component: {fileID: 6098514149108393061}
   - component: {fileID: 9143028595107264932}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Pie
   m_TagString: Pie
   m_Icon: {fileID: 0}
@@ -77,7 +33,6 @@ Transform:
   m_LocalScale: {x: 0.75, y: 0.75, z: 0.75}
   m_Children:
   - {fileID: 7223124700417175466}
-  - {fileID: 8251599021362887515}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -188,9 +143,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3034928676242779607}
     m_Modifications:
+    - target: {fileID: 1527401820263219320, guid: fb8bb6ddce86c1247ae5814644a19d44, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 3190001950308375924, guid: fb8bb6ddce86c1247ae5814644a19d44, type: 3}
       propertyPath: m_Size.y
       value: 1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4189085806731081491, guid: fb8bb6ddce86c1247ae5814644a19d44, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 4233012632307383613, guid: fb8bb6ddce86c1247ae5814644a19d44, type: 3}
       propertyPath: m_RootOrder
@@ -241,8 +204,16 @@ PrefabInstance:
       value: pie
       objectReference: {fileID: 0}
     - target: {fileID: 4969450200615303901, guid: fb8bb6ddce86c1247ae5814644a19d44, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4969450200615303901, guid: fb8bb6ddce86c1247ae5814644a19d44, type: 3}
       propertyPath: m_TagString
       value: Pie
+      objectReference: {fileID: 0}
+    - target: {fileID: 8642908998456875865, guid: fb8bb6ddce86c1247ae5814644a19d44, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 8642908998456875865, guid: fb8bb6ddce86c1247ae5814644a19d44, type: 3}
       propertyPath: m_IsActive

@@ -10,7 +10,7 @@ public class FlyDecider : MonoBehaviour
     //weighted list used to choose a direction
     public List<int> choiceWeight = new List<int>();
 
-    //exclude the fly from being hit by our raycasts
+    //exclude the fly and pie from being hit by our raycasts
     private int layerMask = 1 << 8;
 
         public void LookAround()

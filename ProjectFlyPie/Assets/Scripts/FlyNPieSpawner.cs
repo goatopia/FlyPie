@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class FlyNPieSpawner : MonoBehaviour
 {
@@ -9,6 +10,11 @@ public class FlyNPieSpawner : MonoBehaviour
     public GameObject piePrefab;
     public GameObject flyPrefab;
     public int numberOfFliesSpawned;
+    public TMP_Text generationDisplay;
+    public GameObject currentFly;
+    private GMData gameManager;
+
+    public List<GameObject> activeFlies = new List<GameObject>(); //list of all active flies in the scene
     //private int xPie;
     //private int yPie;
     //private int xFly;
@@ -19,7 +25,18 @@ public class FlyNPieSpawner : MonoBehaviour
     {
         GetCoords();
         Instantiate(piePrefab, pieCoord, Quaternion.identity);
-        Instantiate(flyPrefab, flyCoord, Quaternion.Euler(0,270,0));
+        //spawnFly();
+        currentFly = GameObject.FindGameObjectWithTag("Fly");
+    }
+
+    private void FixedUpdate()
+    {
+        if(activeFlies.Count == 0) //if there are no flies, spawn a new fly
+        {
+            spawnFly(); //instantiate new fly
+            gameManager = FindObjectOfType<GMData>();
+            gameManager.regulator = 0; //reset the game manager's regulator, allowing the new fly to move without the player pressing any buttons
+        }
     }
 
     // creates random coords for pie and fly between (-5,-5) and (4, 4), block centers, keeping a y=0
@@ -38,7 +55,9 @@ public class FlyNPieSpawner : MonoBehaviour
     public void spawnFly()
     {
         numberOfFliesSpawned++;
-        Instantiate(flyPrefab, flyCoord, Quaternion.identity);
+        activeFlies.Add(GameObject.FindGameObjectWithTag("Fly"));
+        Instantiate(flyPrefab, flyCoord, Quaternion.Euler(0,270,0)); //spawn the fly rotated, so it faces forwards
+        generationDisplay.text = "Gen: " + numberOfFliesSpawned.ToString();
     }
 
 }

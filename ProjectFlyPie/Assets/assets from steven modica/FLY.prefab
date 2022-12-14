@@ -221,7 +221,7 @@ GameObject:
   - component: {fileID: 4683407422293922345}
   - component: {fileID: 5554278564460770997}
   - component: {fileID: -8748164007654304137}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FLY
   m_TagString: Fly
   m_Icon: {fileID: 0}

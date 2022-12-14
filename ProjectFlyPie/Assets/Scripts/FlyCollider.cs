@@ -8,9 +8,6 @@ public class FlyCollider : MonoBehaviour
     public GameObject tileName;
     public FlyNPieSpawner spawnerscript;
 
-//we only want to find PIE
-    private int layerMask = 1 << 7;
-
     public void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("heatObject"))

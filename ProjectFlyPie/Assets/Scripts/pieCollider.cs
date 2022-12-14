@@ -30,10 +30,7 @@ public class pieCollider : MonoBehaviour
         Debug.Log("the fly found the pie!");
         generationManager = FindObjectOfType<FlyNPieSpawner>();
         Destroy(GameObject.FindWithTag("Fly")); //remove old fly
-        generationManager.activeFlies.Remove(generationManager.currentFly);
-        Debug.Log(generationManager.activeFlies.Count);
-
-        
+        generationManager.activeFlies.Remove(generationManager.currentFly);       
     }
   
   private void FixedUpdate()

@@ -27,6 +27,8 @@ public class ColdButton : MonoBehaviour
         //Don't go to 1(direction of "forward" raycast)
         if(flyChoice.Direction == 1)
         {
+            flyChoice.choiceWeight.RemoveAll(x => x == 1);
+            /*
             for(var i = 0; i<flyChoice.choiceWeight.Count; i++)
             {
                 if(flyChoice.choiceWeight[i] == 1)
@@ -54,6 +56,8 @@ public class ColdButton : MonoBehaviour
         //Don't go to 3(direction of "backward" raycast)
         if(flyChoice.Direction == 3)
         {
+            flyChoice.choiceWeight.RemoveAll(x => x == 3);
+            /*
             for(var i = 0; i<flyChoice.choiceWeight.Count; i++)
             {
                 if(flyChoice.choiceWeight[i] == 3)
@@ -82,6 +86,8 @@ public class ColdButton : MonoBehaviour
         //Don't go to 2(direction of "right" raycast)
         if(flyChoice.Direction == 2)
         {
+            flyChoice.choiceWeight.RemoveAll(x => x == 2);
+            /*
             for(var i = 0; i<flyChoice.choiceWeight.Count; i++)
             {
                 if(flyChoice.choiceWeight[i] == 2)
@@ -109,6 +115,8 @@ public class ColdButton : MonoBehaviour
         //Don't go to 4(direction of "left" raycast)
         if(flyChoice.Direction == 4)
         {
+            flyChoice.choiceWeight.RemoveAll(x => x == 4);
+            /*
             for(var i = 0; i<flyChoice.choiceWeight.Count; i++)
             {
                 if(flyChoice.choiceWeight[i] == 4)
